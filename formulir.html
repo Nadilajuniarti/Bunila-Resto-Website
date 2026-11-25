@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi | Bunila Resto</title>
+    <link rel="stylesheet" href="formulir.css">
+    <script src="formulir.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="brand" href="beranda.html">Bunila<span>Resto</span></a>
+            <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+            <nav class="nav-links">
+                <a href="beranda.html">Beranda</a>
+                <a href="menu.html">Menu</a>
+                <a href="tentang.html">Tentang</a>
+                <a href="formulir.html" class="active">Reservasi</a>
+                <a href="order.html">Order</a>
+                <a href="feedback.html">Kritik & Saran</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">AMANKAN MEJA ANDA</p>
+            <h1>Reservasi Meja</h1>
+            <p>Pesan tempat lebih awal agar kunjungan Anda lebih nyaman.</p>
+        </section>
+        <section class="form-section">
+            <form id="reservationForm" class="form-card">
+                <h2>Formulir Reservasi</h2>
+                <div class="form-grid">
+                    <div>
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+                    </div>
+                    <div>
+                        <label for="hp">Nomor HP / WhatsApp</label>
+                        <input type="tel" id="hp" required placeholder="Contoh: 08xxxxxxxxxx">
+                    </div>
+                    <div>
+                        <label for="tanggal">Tanggal Reservasi</label>
+                        <input type="date" id="tanggal" required>
+                    </div>
+                    <div>
+                        <label for="jam">Jam Kedatangan</label>
+                        <input type="time" id="jam" required>
+                    </div>
+                    <div>
+                        <label for="jumlah">Jumlah Orang</label>
+                        <input type="number" id="jumlah" min="1" max="50" required placeholder="Masukkan jumlah orang">
+                    </div>
+                    <div>
+                        <label for="area">Pilih Area</label>
+                        <select id="area" required>
+                            <option value="">Pilih area meja</option>
+                            <option value="Indoor">Indoor</option>
+                            <option value="Outdoor">Outdoor</option>
+                            <option value="VIP">VIP</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="catatan">Catatan Tambahan</label>
+                <textarea id="catatan" rows="4" placeholder="Tuliskan permintaan khusus jika ada..."></textarea>
+                <button type="submit" class="btn btn-primary">Buat Reservasi</button>
+            </form>
+            <div id="hasilBox" class="form-card" hidden>
+                <div class="success-icon">✓</div>
+                <h2 class="success-title">Reservasi Anda Berhasil Dibuat!</h2>
+                <p class="success-text">Terima kasih telah melakukan reservasi di Bunila Resto. Kami tunggu kedatangan Anda!</p>
+                <h3>Ringkasan Reservasi</h3>
+                <div id="hasilReservasi">
+                    <p><strong>Nama:</strong> <span id="hasilNama"></span></p>
+                    <p><strong>Nomor WhatsApp:</strong> <span id="hasilHp"></span></p>
+                    <p><strong>Tanggal:</strong> <span id="hasilTanggal"></span></p>
+                    <p><strong>Jam Kedatangan:</strong> <span id="hasilJam"></span></p>
+                    <p><strong>Jumlah Orang:</strong> <span id="hasilJumlah"></span></p>
+                    <p><strong>Area:</strong> <span id="hasilArea"></span></p>
+                    <p><strong>Catatan:</strong> <span id="hasilCatatan"></span></p>
+                </div>
+                <button type="button" id="btnUlang" class="btn btn-primary">Buat Reservasi Lagi</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <a class="brand footer-brand" href="beranda.html">Bunila<span>Resto</span></a>
+                <p>Rasa rumahan, suasana nyaman.</p>
+            </div>
+            <div>
+                <strong>Alamat</strong>
+                <p>Jl. Pendidikan No. 25, Dasan Agung, Kecamatan Selaparang, Kota Mataram, Nusa Tenggara Barat</p>
+                <p>Setiap hari, 10.00–22.00 WITA</p>
+            </div>
+            <div>
+                <strong>Kontak</strong>
+                <p>WhatsApp: 085955109309</p>
+                <p>Instagram: @bunilaresto</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
