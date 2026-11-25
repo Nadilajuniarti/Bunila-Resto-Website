@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order | Bunila Resto</title>
+    <link rel="stylesheet" href="order.css">
+    <script src="order.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="brand" href="beranda.html">Bunila<span>Resto</span></a>
+            <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+            <nav class="nav-links">
+                <a href="beranda.html">Beranda</a>
+                <a href="menu.html">Menu</a>
+                <a href="tentang.html">Tentang</a>
+                <a href="formulir.html">Reservasi</a>
+                <a href="order.html" class="active">Order</a>
+                <a href="feedback.html">Kritik & Saran</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="order-heading page-intro">
+            <p class="eyebrow">PESAN DENGAN MUDAH</p>
+            <h1>Formulir Pemesanan</h1>
+            <p>Silakan lengkapi data berikut untuk melakukan pemesanan.</p>
+        </section>
+        <section class="order-section">
+            <form id="orderForm" class="order-card">
+                <h2>Data Pemesan</h2>
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+                <label for="hp">Nomor WhatsApp</label>
+                <input type="tel" id="hp" placeholder="Contoh: 081234567890" required>
+                <h2>Pilih Menu</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Ayam Geprek Pedas" data-harga="28000"> Ayam Geprek Pedas - Rp28.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Nasi Goreng Spesial" data-harga="20000"> Nasi Goreng Spesial - Rp20.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Sop Iga Buntut" data-harga="30000"> Sop Iga Buntut - Rp30.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Spageti Carbonara" data-harga="15000"> Spageti Carbonara - Rp15.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Jus Alpukat" data-harga="10000"> Jus Alpukat - Rp10.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Kopi Susu Gula Aren" data-harga="15000"> Kopi Susu Gula Aren - Rp15.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Es Jeruk Peras" data-harga="8000"> Es Jeruk Peras - Rp8.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Es Teh Rempah" data-harga="15000"> Es Teh Rempah - Rp15.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Klepon Pandan" data-harga="12000"> Klepon Pandan - Rp12.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Bubur Sum-sum" data-harga="10000"> Bubur Sum-sum - Rp10.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Puding Custard" data-harga="15000"> Puding Custard - Rp15.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" class="pilihan-menu" value="Pisang Goreng Madu" data-harga="20000"> Pisang Goreng Madu - Rp20.000</label>
+                        <input type="number" class="jumlah" min="1" value="1" disabled>
+                    </div>
+                </div>
+                <h2>Jenis Pesanan</h2>
+                <div class="option-list">
+                    <label><input type="radio" name="jenis" value="Makan di Tempat" required> Makan di Tempat</label>
+                    <label><input type="radio" name="jenis" value="Take Away"> Take Away</label>
+                    <label><input type="radio" name="jenis" value="Delivery"> Delivery</label>
+                </div>
+                <div id="alamatBox" hidden>
+                    <label for="alamat">Alamat Pengantaran / Pengambilan</label>
+                    <textarea id="alamat" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+                </div>
+                <h2>Metode Pembayaran</h2>
+                <div class="option-list">
+                    <label><input type="radio" name="pembayaran" value="Tunai" required> Tunai</label>
+                    <label><input type="radio" name="pembayaran" value="QRIS"> QRIS</label>
+                    <label><input type="radio" name="pembayaran" value="Transfer"> Transfer</label>
+                </div>
+                <div id="buktiBox" hidden>
+                    <label for="bukti">Upload Bukti Transfer</label>
+                    <input type="file" id="bukti" accept="image/*">
+                    <small>Format gambar, maksimal 2 MB.</small>
+                </div>
+                <label for="catatan">Catatan Tambahan</label>
+                <textarea id="catatan" rows="3" placeholder="Contoh: Tidak pedas, sambal dipisah, dan sebagainya"></textarea>
+                <button type="submit" class="order-button">Pesan Sekarang</button>
+            </form>
+            <div id="hasilBox" class="order-card" hidden>
+                <div class="success-icon">✓</div>
+                <h2 class="success-title">Pesanan Berhasil Dibuat!</h2>
+                <p class="success-text">Terima kasih telah memesan di Bunila Resto. Pesanan Anda berhasil dibuat.</p>
+                <h3>Ringkasan Pesanan</h3>
+                <div id="hasilPesanan"></div>
+                <button type="button" id="btnUlang" class="order-button">Buat Pesanan Lagi</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <a class="brand footer-brand" href="beranda.html">Bunila<span>Resto</span></a>
+                <p>Rasa rumahan, suasana nyaman.</p>
+            </div>
+            <div>
+                <strong>Alamat</strong>
+                <p>Jl. Pendidikan No. 25, Dasan Agung, Kecamatan Selaparang, Kota Mataram, Nusa Tenggara Barat</p>
+                <p>Setiap hari, 10.00–22.00 WITA</p>
+            </div>
+            <div>
+                <strong>Kontak</strong>
+                <p>WhatsApp: 085955109309</p>
+                <p>Instagram: @bunilaresto</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
