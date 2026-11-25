@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Bunila Resto</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="brand" href="beranda.html">Bunila<span>Resto</span></a>
+            <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+            <nav class="nav-links">
+                <a href="beranda.html">Beranda</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="tentang.html">Tentang</a>
+                <a href="formulir.html">Reservasi</a>
+                <a href="order.html">Order</a>
+                <a href="feedback.html">Kritik & Saran</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">PILIHAN HIDANGAN</p>
+            <h1>Menu Bunila Resto</h1>
+            <p>Nikmati berbagai pilihan makanan, minuman, dan dessert favorit kami.</p>
+        </section>
+        <section class="menu-section">
+            <div class="menu-container">
+                <div class="search-box"><input type="text" id="searchMenu" placeholder="Cari menu favorit kamu..."></div>
+                <div class="filter-menu">
+                    <button class="filter-btn active" data-category="semua">Semua</button>
+                    <button class="filter-btn" data-category="makanan">Makanan</button>
+                    <button class="filter-btn" data-category="minuman">Minuman</button>
+                    <button class="filter-btn" data-category="dessert">Dessert</button>
+                </div>
+                <div class="menu-grid">
+                    <article class="menu-card" data-category="makanan" data-name="ayam geprek pedas">
+                        <img src="Ayam geprek pedas.jpg" alt="Ayam Geprek Pedas">
+                        <div class="menu-info"><h2>Ayam Geprek Pedas</h2><p>Ayam goreng crispy dengan sambal pedas gurih.</p><strong>Rp28.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="makanan" data-name="nasi goreng spesial">
+                        <img src="Nasi goreng spesial.jpg" alt="Nasi Goreng Spesial">
+                        <div class="menu-info"><h2>Nasi Goreng Spesial</h2><p>Nasi goreng dengan telur dan bumbu pilihan.</p><strong>Rp20.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="makanan" data-name="sop iga buntut">
+                        <img src="Sop iga buntut.jpg" alt="Sop Iga Buntut">
+                        <div class="menu-info"><h2>Sop Iga Buntut</h2><p>Sop iga dengan kuah hangat dan rempah pilihan.</p><strong>Rp30.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="makanan" data-name="spageti carbonara">
+                        <img src="Spageti Carbonara.jpg" alt="Spageti Carbonara">
+                        <div class="menu-info"><h2>Spageti Carbonara</h2><p>Spageti dengan saus creamy yang gurih.</p><strong>Rp15.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="minuman" data-name="jus alpukat">
+                        <img src="Jus alpukat.jpg" alt="Jus Alpukat">
+                        <div class="menu-info"><h2>Jus Alpukat</h2><p>Jus alpukat segar dengan rasa yang lembut.</p><strong>Rp10.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="minuman" data-name="kopi susu gula aren">
+                        <img src="Kopi susu gula aren.jpg" alt="Kopi Susu Gula Aren">
+                        <div class="menu-info"><h2>Kopi Susu Gula Aren</h2><p>Perpaduan kopi, susu, dan gula aren.</p><strong>Rp15.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="minuman" data-name="es jeruk peras">
+                        <img src="Es jeruk peras.jpg" alt="Es Jeruk Peras">
+                        <div class="menu-info"><h2>Es Jeruk Peras</h2><p>Jeruk segar yang disajikan dengan es.</p><strong>Rp8.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="minuman" data-name="es teh rempah">
+                        <img src="Es teh rempah.jpg" alt="Es Teh Rempah">
+                        <div class="menu-info"><h2>Es Teh Rempah</h2><p>Teh segar dengan aroma rempah pilihan.</p><strong>Rp15.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="dessert" data-name="klepon pandan">
+                        <img src="klepon pandan.jpg" alt="Klepon Pandan">
+                        <div class="menu-info"><h2>Klepon Pandan</h2><p>Klepon pandan dengan isian gula merah.</p><strong>Rp12.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="dessert" data-name="bubur sum-sum">
+                        <img src="Bubur sum-sum.jpg" alt="Bubur Sum-sum">
+                        <div class="menu-info"><h2>Bubur Sum-sum</h2><p>Bubur lembut dengan kuah gula merah.</p><strong>Rp10.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="dessert" data-name="puding custard">
+                        <img src="Puding custard kukus.jpg" alt="Puding Custard">
+                        <div class="menu-info"><h2>Puding Custard</h2><p>Puding lembut dengan rasa manis dan creamy.</p><strong>Rp15.000</strong></div>
+                    </article>
+                    <article class="menu-card" data-category="dessert" data-name="pisang goreng madu">
+                        <img src="Pisang goreng madu.jpg" alt="Pisang Goreng Madu">
+                        <div class="menu-info"><h2>Pisang Goreng Madu</h2><p>Pisang goreng renyah dengan balutan madu.</p><strong>Rp20.000</strong></div>
+                    </article>
+                </div>
+                <p id="noMenu">Menu tidak ditemukan.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <a class="brand footer-brand" href="beranda.html">Bunila<span>Resto</span></a>
+                <p>Rasa rumahan, suasana nyaman.</p>
+            </div>
+            <div>
+                <strong>Alamat</strong>
+                <p>Jl. Pendidikan No. 25, Dasan Agung, Kecamatan Selaparang, Kota Mataram, Nusa Tenggara Barat</p>
+                <p>Setiap hari, 10.00–22.00 WITA</p>
+            </div>
+            <div>
+                <strong>Kontak</strong>
+                <p>WhatsApp: 085955109309</p>
+                <p>Instagram: @bunilaresto</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
