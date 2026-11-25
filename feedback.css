@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(248,247,242,.8), rgba(248,247,242,.8)), url("backround bunila.avif") fixed;
+    color: #333;
+    line-height: 1.6;
+}
+a { text-decoration: none; }
+[hidden] { display: none !important; }
+
+.site-header {
+    background: #244b38;
+    padding: 15px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+.brand {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.brand span { color: #e5bd75; }
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: .3s;
+}
+.nav-links a:hover, .nav-links a.active { color: #e5bd75; }
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.page-intro, .about-hero {
+    background: #edf1e9;
+    text-align: center;
+    padding: 65px 24px 55px;
+}
+.eyebrow, .intro-label {
+    color: #c69c53;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.page-intro h1, .about-hero h1 {
+    color: #244b38;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.page-intro p:last-child, .about-hero p:last-child {
+    color: #72766e;
+    font-size: 16px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.feedback-section, .order-section {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 20px 50px;
+}
+.feedback-card, .form-card, .order-card, #hasilBox {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.07);
+}
+.form-heading { text-align: center; margin-bottom: 30px; }
+.form-heading h2 { color: #244b38; font-size: 25px; margin-bottom: 7px; }
+.form-heading p { color: #72766e; font-size: 14px; }
+.form-group { margin-bottom: 22px; }
+.form-group > label {
+    display: block;
+    font-weight: bold;
+    color: #41483e;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d8d8d0;
+    border-radius: 7px;
+    font: 14px Arial, sans-serif;
+    background: white;
+    outline: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #244b38;
+    outline: 2px solid #c69c5370;
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: #aaa; }
+.rating-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.rating-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    border: 1px solid #d8d8d0;
+    border-radius: 7px;
+    color: #c69c53;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+.rating-options label:hover { background: #f8f7f2; border-color: #c69c53; }
+.rating-options input, .checkbox-group input { accent-color: #244b38; }
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.checkbox-group input { width: 16px; height: 16px; }
+.btn, .order-button {
+    display: inline-block;
+    width: 100%;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 7px;
+    font: bold 15px Arial, sans-serif;
+    cursor: pointer;
+    background: #c69c53;
+    color: white;
+    transition: .3s;
+}
+.btn:hover, .order-button:hover { background: #a9813d; }
+
+#hasilBox { text-align: center; }
+.success-icon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #e2f3e7;
+    color: #238b4b;
+    font-size: 52px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.success-title { color: #238b4b; font-size: 25px; margin: 10px 0; }
+.success-text { color: #72766e; font-size: 14px; margin-bottom: 30px; }
+#hasilBox h3 { color: #244b38; font-size: 20px; margin-bottom: 15px; }
+#hasilFeedback, #hasilReservasi, #hasilPesanan {
+    background: #f8f7f2;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+#hasilFeedback p { padding: 10px 0; border-bottom: 1px solid #e5e2d8; overflow-wrap: anywhere; }
+#hasilFeedback p:last-child { border-bottom: none; }
+#hasilFeedback strong { color: #244b38; }
+
+.site-footer {
+    background: #183628;
+    color: white;
+    padding: 40px 8% 15px;
+}
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+.footer-brand { font-size: 23px; margin-bottom: 12px; }
+.footer-inner strong, .footer-info h3 { color: #e5bd75; font-size: 14px; }
+.footer-inner p, .footer-about p, .footer-info p {
+    font-size: 14px;
+    color: #e8e8e8;
+    margin: 8px 0 0;
+}
+.footer-info h3 { font-size: 16px; margin-bottom: 13px; }
+
+@media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #244b38;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .nav-links.open { display: flex; }
+    .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 25px; }
+}
+@media (max-width: 560px) {
+    .page-intro h1, .about-hero h1 { font-size: 30px; }
+    .feedback-card { padding: 25px 20px; }
+    .form-heading h2 { font-size: 21px; }
+    .rating-options { gap: 8px; }
+    .rating-options label { padding: 9px 11px; font-size: 13px; }
+    #hasilBox { padding: 30px 20px; }
+    .success-title { font-size: 23px; }
+    #hasilFeedback { padding: 15px; }
+}
