@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-header {
+    background: #244b38;
+    padding: 15px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.brand {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.brand span,
+.footer-inner strong {
+    color: #e5bd75;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e5bd75;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    padding: 40px 8%;
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: #c69c53;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 em {
+    color: #e5bd75;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background: #c69c53;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #a77e3d;
+}
+
+.btn-light {
+    background: white;
+    color: #244b38;
+}
+
+.btn-light:hover {
+    background: #e5bd75;
+}
+
+.section,
+.why-section {
+    padding: 65px 0;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: #244b38;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section p,
+.why-section p {
+    text-align: center;
+}
+
+.why-section {
+    background: #edf1e9;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-grid article {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.feature-grid h3 {
+    color: #244b38;
+    margin-bottom: 10px;
+}
+
+.feature-grid p {
+    font-size: 14px;
+}
+
+.promo-band {
+    background: #244b38;
+    color: white;
+    padding: 50px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.promo-band h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.promo-band p {
+    color: #e8e8e8;
+}
+
+.site-footer {
+    background: #183628;
+    color: white;
+    padding: 40px 8% 15px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-brand {
+    font-size: 23px;
+    display: inline-block;
+}
+
+.footer-inner p {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #e8e8e8;
+    margin: 8px 0 0;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #244b38;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-content {
+        padding: 25px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .feature-grid,
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-band {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-inner {
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e5bd75;
+}
+
+.page-intro,
+.about-hero {
+    background: #edf1e9;
+    text-align: center;
+    padding: 65px 24px 55px;
+    margin: 0;
+}
+
+.page-intro h1,
+.about-hero h1 {
+    color: #244b38;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.page-intro p:last-child,
+.about-hero p:last-child {
+    color: #72766e;
+    font-size: 16px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.page-intro .eyebrow,
+.page-intro .intro-label,
+.about-hero .eyebrow {
+    color: #c69c53;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 auto 10px;
+}
+
+.feedback-section,
+.order-section {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 20px 50px;
+}
+
+.form-card,
+.order-card,
+.feedback-card,
+#hasilBox {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+:is(.form-card, .order-card, .feedback-card) :is(input[type="text"], input[type="tel"],
+input[type="number"], input[type="date"], input[type="time"], select, textarea) {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: 14px Arial, sans-serif;
+}
+
+:is(.form-card, .order-card, .feedback-card) :is(input, select, textarea):focus {
+    outline: 2px solid #c69c5370;
+    border-color: #c69c53;
+}
+
+.form-card label,
+.order-card label,
+.form-group:not(.checkbox-group) > label {
+    font-size: 14px;
+    color: #41483e;
+}
+
+.success-title {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+#hasilFeedback,
+#hasilReservasi,
+#hasilPesanan {
+    padding: 18px;
+    font-size: 14px;
+}
+
+.btn,
+.order-button {
+    padding: 13px 24px;
+    border-radius: 7px;
+    font: bold 15px Arial, sans-serif;
+    transition: 0.3s;
+}
+
+.btn-primary:hover,
+.order-button:hover {
+    background: #a9813d;
+}
+
+.footer-inner strong {
+    color: #e5bd75;
+    font-size: 14px;
+}
+
+@media (max-width: 520px) {
+    .page-intro h1,
+    .about-hero h1 {
+        font-size: 30px;
+    }
+}
+
+body { background: linear-gradient(rgba(248, 247, 242, 0.8), rgba(248, 247, 242, 0.8)), url("backround bunila.avif") fixed; }
